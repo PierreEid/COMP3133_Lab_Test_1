@@ -142,3 +142,13 @@ Follow these steps to run the application locally:
 - `typing-room`
 - `typing-private`
 - `online-users`
+
+## Screenshots
+
+![Login Page](Login.png "Login Page")
+
+![Signup Page](Signup.png "Signup Page")
+
+![Dashboard](Dashboard.png "Dashboard")
+
+![Message](Message.png "Message")
