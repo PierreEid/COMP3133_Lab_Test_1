@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # studentID_lab_test1_chat_app
 
 Real-time chat application for COMP3133 Lab Test 1 using Express, Socket.io, and MongoDB.
@@ -102,3 +103,6 @@ Server emissions:
 - `typing-room`
 - `typing-private`
 - `online-users`
+=======
+# COMP3133_Lab_Test_1
+>>>>>>> 170327340a4e93b7c39cd8559255a0023bd0e140
