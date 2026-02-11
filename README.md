@@ -1,27 +1,44 @@
-<<<<<<< HEAD
-# studentID_lab_test1_chat_app
+# 101529840 Lab Test 1 – Chat Application
 
-Real-time chat application for COMP3133 Lab Test 1 using Express, Socket.io, and MongoDB.
+A real-time messaging platform developed for COMP3133 Lab Test 1. The application uses Express, Socket.io, and MongoDB to support live communication between users.
 
-## Tech Stack
+---
 
-- Backend: Node.js, Express, Socket.io, Mongoose
-- Frontend: HTML5, CSS, Bootstrap, fetch, jQuery
-- Database: MongoDB
+## Technology Used
 
-## Features Implemented
+**Server-side**
+- Node.js
+- Express
+- Socket.io
+- Mongoose
 
-- Signup with MongoDB persistence and unique username validation
-- Login with localStorage session handling
-- Logout functionality
-- Predefined room list and join/leave support
-- Room-based real-time messaging with MongoDB storage
-- Private 1-to-1 messaging with MongoDB storage
-- Typing indicator for room chat and private chat
-- Online user list
-- Message history loading for room and private chats
+**Client-side**
+- HTML5
+- CSS
+- Bootstrap
+- jQuery
+- Fetch API
 
-## Project Structure
+**Database**
+- MongoDB
+
+---
+
+## Core Functionality
+
+- User registration with data stored in MongoDB and enforcement of unique usernames
+- Authentication system with session tracking via `localStorage`
+- Ability for users to log out securely
+- Default chat rooms that users can enter or exit
+- Live group messaging with message persistence
+- Direct private messaging between users with stored history
+- Typing notifications for both group and private conversations
+- Active user display showing who is currently online
+- Retrieval of previous messages for rooms and private chats
+
+---
+
+## Directory Layout
 
 ```text
 .
@@ -43,50 +60,73 @@ Real-time chat application for COMP3133 Lab Test 1 using Express, Socket.io, and
 `-- README.md
 ```
 
-## Environment Variables
+---
 
-Create a `.env` file in the project root.
+## Configuration
+
+Create a `.env` file at the root level of the project and include the following variables:
 
 ```env
 PORT=3000
 MONGODB_URI=mongodb://127.0.0.1:27017/lab_test1_chat
 ```
 
-If you are using MongoDB Atlas, replace `MONGODB_URI` with your Atlas connection string.
+If you prefer using MongoDB Atlas, substitute the connection string accordingly.
 
-## Setup and Run
+---
 
-1. Install dependencies:
+## Getting Started
+
+Follow these steps to run the application locally:
+
+1. Install the required packages:
    ```bash
    npm install
    ```
-2. Make sure MongoDB is running:
-   - Local MongoDB service, or
-   - Atlas connection string in `.env`
-3. Start the application:
+
+2. Ensure your MongoDB instance is available:
+   - Run a local MongoDB service, **or**
+   - Provide an Atlas connection string inside the `.env` file.
+
+3. Launch the server:
    ```bash
    npm start
    ```
-4. Open in browser:
-   - `http://localhost:3000`
 
-## Pages
+4. Navigate to the app in your browser:
+   ```
+   http://localhost:3000
+   ```
 
-- Signup: `http://localhost:3000/view/signup.html`
-- Login: `http://localhost:3000/view/login.html`
-- Chat: `http://localhost:3000/view/chat.html`
+---
 
-## API Endpoints
+## Application Routes
 
-- `POST /api/signup`
-- `POST /api/login`
-- `GET /api/rooms`
-- `GET /api/users?username=<currentUser>`
-- `GET /api/messages/room/:room`
-- `GET /api/messages/private/:otherUser?username=<currentUser>`
+- **Signup:**  
+  `http://localhost:3000/view/signup.html`
 
-## Socket Events
+- **Login:**  
+  `http://localhost:3000/view/login.html`
 
+- **Chat Interface:**  
+  `http://localhost:3000/view/chat.html`
+
+---
+
+## REST Endpoints
+
+- `POST /api/signup` – Register a new user
+- `POST /api/login` – Authenticate an existing user
+- `GET /api/rooms` – Retrieve available chat rooms
+- `GET /api/users?username=<currentUser>` – Fetch users excluding the current user
+- `GET /api/messages/room/:room` – Load messages for a specific room
+- `GET /api/messages/private/:otherUser?username=<currentUser>` – Load private conversation history
+
+---
+
+## WebSocket Events
+
+**Client Events**
 - `register-user`
 - `join-room`
 - `leave-room`
@@ -95,14 +135,10 @@ If you are using MongoDB Atlas, replace `MONGODB_URI` with your Atlas connection
 - `typing-room`
 - `typing-private`
 
-Server emissions:
-
+**Server Broadcasts**
 - `room-message`
 - `private-message`
 - `room-system-message`
 - `typing-room`
 - `typing-private`
 - `online-users`
-=======
-# COMP3133_Lab_Test_1
->>>>>>> 170327340a4e93b7c39cd8559255a0023bd0e140
