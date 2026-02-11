@@ -1,0 +1,37 @@
+body {
+  background: linear-gradient(120deg, #f2f7ff, #e8fff3);
+  min-height: 100vh;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 50vh;
+  background: #ffffff;
+}
+
+.message-item {
+  max-width: 85%;
+}
+
+.self-message {
+  margin-left: auto;
+  background: #d7f8de;
+}
+
+.other-message {
+  margin-right: auto;
+  background: #edf1f5;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "studentID_lab_test1_chat_app",
+  "version": "1.0.0",
+  "description": "COMP3133 Lab Test 1 chat application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "express": "^4.21.2",
+    "mongoose": "^8.19.1",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
